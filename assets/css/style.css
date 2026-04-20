@@ -163,9 +163,15 @@ p {
 }
 
 #botoes-sobre .contato{
-    border: 0.1rem solid var(--azul-ardosia-escuro);
+    border: 0.07rem solid var(--azul-ardosia-escuro);
     border-radius: 10%;
     padding: 0.8rem 1.2rem;
     width: 1.5rem;
     color: var(--branco);
+    transition-duration: .3s;
+}
+
+#botoes-sobre .contato:hover {
+    color: var(--azul-muito-claro);
+    border: 0.07rem solid var(--azul-muito-claro);
 }
