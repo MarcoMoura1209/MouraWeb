@@ -1,31 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-
-:root{
-    --azul-claro: #1ea2b8;
-    --azul-muito-claro: #36c9eb;
-    --azul-noite-escuro: #101829;
-    --azul-medio: #404e64;
-    --azul-petroleo-escuro: #175c6f;
-    --azul-acinzentado: #6c7e98;
-    --azul-cinza: #445e82;
-    --branco: #fff4f2;
-    --azul-neon: #2323FF;
-    --azul-ardosia-escuro: #404e64;
-    --verde-esmeralda: #2c7d55;
-    
-    --JetBrains-mono: 'JetBrains Mono', monospace;
-    --Inter: 'Inter', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--azul-noite-escuro);
-}
+@import 'base.css';
+@import 'components.css';
+@import 'sections.css';
 
 header, section, footer {
     padding: 0% 5%;
@@ -124,63 +101,3 @@ p {
     font-family: var(--Inter);
     margin: 2rem 0rem;
 }
-
-
-.conteudo-sobre p{
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-    font-family: var(--Inter);
-    max-width: 31rem;
-}
-
-#codigo-sobre {
-    font-size: 1rem;
-    line-height: 1.75rem;
-    font-family: var(--Inter);
-    max-width: 31rem;
-}
-
-#botoes-sobre {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 2.5rem 0rem;
-}
-
-#botoes-sobre a{
-    text-decoration: none;
-    font-family: var(--JetBrains-mono);
-    margin: 0rem 2rem;
-}
-
-#botoes-sobre .ver-projeto{
-    background-color: var(--azul-claro);
-    padding: 1rem 1.5rem;
-    /* width: 2rem; */
-    color: var(--azul-noite-escuro);
-    border-radius: 5%;
-    transition-duration: .3s;
-    margin-left: 0rem;
-}
-
-#botoes-sobre .contato{
-    border: 0.07rem solid var(--azul-ardosia-escuro);
-    border-radius: 10%;
-    padding: 1rem 1.5rem;
-    /* width: 1.5rem; */
-    color: var(--branco);
-    transition-duration: .3s;
-}
-
-#botoes-sobre .contato:hover {
-    color: var(--azul-muito-claro);
-    border: 0.07rem solid var(--azul-muito-claro);
-}
-
-#botoes-sobre .ver-projeto:hover {
-    background-color: var(--azul-muito-claro);
-}
-
-#Sobre {
-    margin: 3rem 0rem;
-    }
