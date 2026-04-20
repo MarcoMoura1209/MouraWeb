@@ -3,6 +3,7 @@
 
 :root{
     --azul-claro: #1ea2b8;
+    --azul-muito-claro: #36c9eb;
     --azul-noite-escuro: #101829;
     --azul-medio: #404e64;
     --azul-petroleo-escuro: #175c6f;
@@ -32,6 +33,10 @@ header, section, footer {
 
 .azul-claro {
     color: var(--azul-claro);
+}
+
+.azul-muito-claro {
+    color: var(--azul-muito-claro);
 }
 
 .azul-noite-escuro{
@@ -80,6 +85,8 @@ nav ul li {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 4rem;
 }
 
 .azul-neon {
