@@ -9,10 +9,10 @@
     --azul-petroleo-escuro: #175c6f;
     --azul-acinzentado: #6c7e98;
     --azul-cinza: #445e82;
-    --branco: #f9ccff;
+    --branco: #fff4f2;
     --azul-neon: #2323FF;
     --azul-ardosia-escuro: #404e64;
-    --verde-esmeralda: #2c7d55;
+    --verde-esmeralda: #2cab6c;
     
     --JetBrains-mono: 'JetBrains Mono', monospace;
     --Inter: 'Inter', sans-serif;
@@ -140,13 +140,10 @@ p {
     max-width: 31rem;
 }
 
-.conteudo-sobre {
-    margin: 3rem 0rem;
-}
-
 #botoes-sobre {
     display: flex;
     justify-content: left;
+    margin: 2.5rem 0rem;
 }
 
 #botoes-sobre a{
@@ -179,4 +176,12 @@ p {
 
 #botoes-sobre .ver-projeto:hover {
     background-color: var(--azul-muito-claro);
+}
+
+#Sobre {
+    margin: 3rem 0rem;
+    }
+
+.hero-container {
+    height: 100vh;
 }
