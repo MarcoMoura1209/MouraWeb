@@ -1,24 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MouraWeb</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <header>
-        <h2 class="texto-azul">
+        <h2 class="azul-claro titulo-header">
             &lt;MouraWeb /&gt;
         </h2>
 
         <nav>
             <ul>
-                <li><a href="#Sobre">Sobre</a></li>
-                <li><a href="#Projetos">Projetos</a></li>
-                <li><a href="#Stack">Stack</a></li>
-                <li><a href="#Contato">Contato</a></li>
+                <li><a class="hover-azul" href="#Sobre">SOBRE</a></li>
+                <li><a class="hover-azul" href="#Projetos">PROJETOS</a></li>
+                <li><a class="hover-azul" href="#Stack">STACK</a></li>
+                <li><a class="hover-azul" href="#Contato">CONTATO</a></li>
             </ul>
         </nav>
 
@@ -26,14 +28,15 @@
 
     <main>
         <section id="Sobre">
-            <h3 class="texto-azul"># class MarcoMoura(Developer):</h3>
-            <h1 class="texto-azul-neon">MouraWeb</h1>
-            <h1 class="texto-branco">Marco Moura</h1>
-            <p>Desenvolvedor web júnior especializado em Python & Django. Transformando lógica em experiências digitais elegantes.</p>
-            <p>
-                <span>self.nome = "Marco Moura"</span> <br>
-                <span>self.stack = ["Python", "Django", "PostgreSQL"</span>] <br>
-                <span>self.status = "disponível"</span> <br>
+            <h3 class="azul-claro"># class MarcoMoura(Developer):</h3>
+            <h1 class="azul-neon">MouraWeb</h1>
+            <h1 class="branco">Marco Moura</h1>
+            <p>Desenvolvedor web júnior especializado em <span class="azul-claro">Python</span> & <span class="azul-cinza">Django</span>. Transformando lógica
+                em experiências digitais elegantes.</p>
+            <p class="azul-cinza">
+                <span class="azul-petroleo-escuro">self</span>.<span class="azul-medio">nome =</span> "Marco Moura" <br>
+                <span class="azul-petroleo-escuro">self</span>.<span class="azul-medio">stack =</span> ["Python", "Django", "PostgreSQL" <br>
+                <span class="azul-petroleo-escuro">self</span>.<span class="azul-medio">status =</span> <span class="verde-esmeralda">"disponível"</span> <br>
             </p>
 
             <nav>
@@ -46,4 +49,5 @@
         </section>
     </main>
 </body>
+
 </html>
