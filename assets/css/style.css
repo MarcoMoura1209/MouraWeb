@@ -143,3 +143,29 @@ p {
 .conteudo-sobre {
     margin: 3rem 0rem;
 }
+
+#botoes-sobre {
+    display: flex;
+    justify-content: left;
+}
+
+#botoes-sobre a{
+    text-decoration: none;
+    font-family: var(--JetBrains-mono);
+}
+
+#botoes-sobre .ver-projeto{
+    background-color: var(--azul-claro);
+    padding: 0.8rem 1.2rem;
+    width: 1.5rem;
+    color: var(--azul-noite-escuro);
+    border-radius: 5%;
+}
+
+#botoes-sobre .contato{
+    border: 0.1rem solid var(--azul-ardosia-escuro);
+    border-radius: 10%;
+    padding: 0.8rem 1.2rem;
+    width: 1.5rem;
+    color: var(--branco);
+}
