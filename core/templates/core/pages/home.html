@@ -64,6 +64,16 @@
             <h3 class="titulo-muito-pequeno"># models.Portfolio.objects.all()</h3>
             <h2 class="titulo">Projetos</h2>
             <p>Cada projeto é uma demonstração prática do ecossistema Django, do ORM ao deploy.</p>
+
+            {% for projeto in projetos %}
+
+                {% include "core/partials/projeto.html" %}
+
+            {% empty %}
+
+
+
+            {% endfor %}
         </section>
     </main>
 </body>
