@@ -21,6 +21,11 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
     background-color: var(--azul-noite-escuro);
     padding-top: 4rem;

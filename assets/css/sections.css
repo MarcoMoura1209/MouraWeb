@@ -2,7 +2,9 @@
 /* ========  SOBRE  ======== */
 
 #Sobre {
-    margin: 3rem 0rem;
+    scroll-margin-top: 5rem; /* 4rem do header + 1rem de respiro */
+    padding-top: 3rem;
+    margin-bottom: 3rem;
     height: 90vh;
 }
 
@@ -31,4 +33,5 @@
 
 #Projetos {
     height: 95vh;
+    scroll-margin-top: 5rem;
 }
