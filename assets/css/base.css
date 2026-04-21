@@ -23,9 +23,6 @@
 
 body {
     background-color: var(--azul-noite-escuro);
-}
-
-main {
     padding-top: 4rem;
 }
 

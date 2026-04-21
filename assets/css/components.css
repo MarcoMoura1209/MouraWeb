@@ -32,10 +32,10 @@ header {
     align-items: center;
     height: 4rem;
     width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
+    background-color: var(--azul-noite-escuro); /* importante para não ficar transparente */
 }
 
 nav ul {
