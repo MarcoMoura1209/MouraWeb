@@ -1,13 +1,6 @@
 
 /* ========  SOBRE  ======== */
 
-.conteudo-sobre p{
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-    font-family: var(--Inter);
-    max-width: 31rem;
-}
-
 #codigo-sobre {
     font-size: 1rem;
     line-height: 1.75rem;
@@ -32,4 +25,5 @@
 
 #Sobre {
     margin: 3rem 0rem;
-    }
+    height: 100vh;
+}

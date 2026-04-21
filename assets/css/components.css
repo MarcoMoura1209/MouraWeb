@@ -6,16 +6,17 @@
 }
 
 .titulo-principal {
+    display: inline-block;
     font-size: 6rem;
     line-height: 1;
     font-family: var(--Inter);
     font-weight: 900;
     margin: 2rem 0rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     color: var(--azul-muito-claro);
 }
 
-.subtitulo {
+.titulo {
     font-size: 3rem;
     line-height: 1;
     letter-spacing: -.05em;
