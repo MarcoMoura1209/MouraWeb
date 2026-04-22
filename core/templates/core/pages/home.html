@@ -11,6 +11,13 @@
     <meta property="og:title" content="MouraWeb — Marco Moura">
     <meta property="og:description" content="Desenvolvedor web júnior especializado em Python e Django.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{% static 'img/og-image.jpg' %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Marco Moura — Desenvolvedor web júnior em Python e Django">
+
+    <!-- Adicionar após o deploy -->
+    <!-- <meta property="og:url" content="https://www.meusite.com.br/"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,9 +29,9 @@
 
 <body>
     <header>
-        <h2 class="titulo-muito-pequeno">
+        <span class="titulo-muito-pequeno">
             &lt;MouraWeb /&gt;
-        </h2>
+        </span>
 
         <nav>
             <ul>
@@ -40,7 +47,7 @@
     <main>
         <section id="Sobre">
             <div class="conteudo-sobre">
-                <h3 class="titulo-muito-pequeno"># class MarcoMoura(Developer):</h3>
+                <p class="titulo-muito-pequeno"># class MarcoMoura(Developer):</p>
                 <span class="titulo-principal">MouraWeb</span>
                 <h1 class="titulo">Marco Moura</h1>
                 <p>
@@ -65,7 +72,7 @@
         </section>
 
         <section id="Projetos">
-            <h3 class="titulo-muito-pequeno"># models.Portfolio.objects.all()</h3>
+            <p class="titulo-muito-pequeno"># models.Portfolio.objects.all()</p>
             <h2 class="titulo">Projetos</h2>
             <p>Cada projeto é uma demonstração prática do ecossistema Django, do ORM ao deploy.</p>
 
@@ -76,7 +83,7 @@
 
                 {% empty %}
 
-                    <h>Não foi possivel achar nenhum projeto 😢</h>
+                    <h3>Não foi possivel achar nenhum projeto 😢</h3>
                     <p>Fique a vontade para navegar pelo resto do site!</p>
 
                 {% endfor %}

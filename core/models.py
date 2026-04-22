@@ -14,7 +14,7 @@ class Tecnologias(models.Model):
         verbose_name_plural = 'Tecnologias'
 
 class Projeto(models.Model):
-    titulo = models.CharField(max_length=65)
+    titulo = models.TextField()
     descricao = models.CharField(max_length=165)
     link_github = models.URLField()
     imagem = models.ImageField(upload_to='projetos/')
