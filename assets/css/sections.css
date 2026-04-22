@@ -5,7 +5,7 @@
     scroll-margin-top: 5rem; /* 4rem do header + 1rem de respiro */
     padding-top: 3rem;
     margin-bottom: 3rem;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 #codigo-sobre {
@@ -34,7 +34,7 @@
 
 
 #Projetos {
-    height: 95vh;
+    min-height: 95vh;
     scroll-margin-top: 5rem;
 }
 
