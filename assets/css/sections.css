@@ -39,8 +39,9 @@
 }
 
 .container-projetos {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .projeto{
@@ -114,4 +115,12 @@
 
 .projeto-links a:hover{
     color: var(--azul-claro);
+}
+
+
+/* ======== STACK ======== */
+
+
+#Stack {
+    min-height: 90vh;
 }
