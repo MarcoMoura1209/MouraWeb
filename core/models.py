@@ -28,3 +28,15 @@ class Projeto(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class Skills(models.Model):
+    nome = models.CharField(max_length=50)
+    porcentagem = models.PositiveIntegerField(default=0)
+    
+    class Meta:
+        verbose_name = 'Skill'
+        verbose_name_plural = 'Skills'
+
+    def __str__(self):
+        return self.nome

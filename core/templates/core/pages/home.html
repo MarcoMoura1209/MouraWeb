@@ -102,30 +102,50 @@
 
             <div class="container-skills">
                 <div class="container-skills-badge">
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
+                    {% for skill in skills %}
+
+                    <div class="skill">
+                        <div class="skill-nome">
+                            <i class="fa-solid fa-circle fa-2xs" style="color: #36c9eb;"></i>
+
+                            <h3>
+                                {{ skill.nome }}
+                            </h3>
+                        </div>
+
+                        <p class="skill-porcentagem">
+                            {{ skill.porcentagem }}%
+                        </p>
+                    </div>
+
+                    {% empty %}
+                        <h3>Não foi possivel achar nenhuma skill 😢</h3>
+                        <p>Fique a vontade para navegar pelo resto do site!</p>
+                    {% endfor %}
+
                 </div>
 
                 <div class="container-skills-barra">
-                    <div class="barra-container">
-                        <div class="barra"></div>
+                    {% for skill in skills %}
+                    
+                    <div class="container-barra">
+                        <div class="texto-barra">
+                            <h3 class="skill-nome"> {{skill.nome}} </h3>
+                            <p class="skill-porcentagem"> {{ skill.porcentagem }}% </p>
+                        </div>
+
+                        <div class="barra">
+                            <div class="barra-progresso" style="width: {{ skill.porcentagem }}%;"></div>
+                        </div>
                     </div>
-                    <div class="barra-container">
-                        <div class="barra"></div>
-                    </div>
-                    <div class="barra-container">
-                        <div class="barra"></div>
-                    </div>
-                    <div class="barra-container">
-                        <div class="barra"></div>
-                    </div>
-                    <div class="barra-container">
-                        <div class="barra"></div>
-                    </div>
+
+                    {% empty %}
+                        <h3>Não foi possivel achar nenhuma skill 😢</h3>
+                        <p>Fique a vontade para navegar pelo resto do site!</p>
+                    {% endfor %}
+
                 </div>
+
             </div>
         </section>
     </main>

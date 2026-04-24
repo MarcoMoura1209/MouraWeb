@@ -94,3 +94,10 @@ nav ul li {
     font-family: var(--JetBrains-mono);
     font-size: .8rem;
 }
+
+.point {
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--azul-muito-claro);
+    border-radius: 50%;
+}
