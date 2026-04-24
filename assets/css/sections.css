@@ -239,3 +239,21 @@
     font-family: var(--JetBrains-mono);
     font-size: .9rem;
 }
+
+#botoes-contato {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#botoes-contato a{
+    padding: 1rem;
+    background-color: var(--azul-marinho-escuro);
+    border: 0.1rem solid var(--azul-ardosia-escuro);
+    transition: .3s;
+}
+
+#botoes-contato a:hover {
+    color: var(--azul-muito-claro);
+    border: 0.1rem solid var(--azul-muito-claro);
+}
