@@ -65,7 +65,7 @@ nav ul li {
 .btn-primario{
     background-color: var(--azul-claro);
     color: var(--azul-noite-escuro);
-    border-radius: 5%;
+    border-radius: .375rem;
     transition-duration: .3s;
     margin-left: 0rem;
 }
@@ -90,14 +90,11 @@ nav ul li {
     padding: .3rem .6rem;
     color: var(--azul-acinzentado);
     background-color: var(--azul-ardosia-escuro);
-    border-radius: .5rem;
+    border-radius: .375rem;
     font-family: var(--JetBrains-mono);
     font-size: .8rem;
 }
 
-.point {
-    width: .5rem;
-    height: .5rem;
-    background-color: var(--azul-muito-claro);
-    border-radius: 50%;
+.fa-circle {
+    color: var(--azul-muito-claro);
 }

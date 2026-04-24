@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="canonical">
+    <link rel="canonical" href="/">
 
     <title>MouraWeb</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -106,10 +106,10 @@
 
                     <div class="skill">
                         <div class="skill-nome-badge">
-                            <i class="fa-solid fa-circle fa-2xs" style="color: #36c9eb;"></i>
-                            <h3>
+                             <i class="fa-solid fa-circle fa-2xs"></i>
+                            <span>
                                 {{ skill.nome }}
-                            </h3>
+                            </span>
                         </div>
 
                         <p class="skill-porcentagem">
@@ -129,7 +129,7 @@
                     
                     <div class="container-barra">
                         <div class="texto-barra">
-                            <h3 class="skill-nome"> {{skill.nome}} </h3>
+                            <span class="skill-nome"> {{skill.nome}} </span>
                             <p class="skill-porcentagem"> {{ skill.porcentagem }}% </p>
                         </div>
 
