@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
+from django_ratelimit.decorators import ratelimit
 from .models import Projeto, Skill
 from .forms import Form
 
 
-# Create your views here.
+@ratelimit(key='ip', rate='5/h', method='POST', block=True)
 def home(request):
     projetos = Projeto.objects.all()
     skills = Skill.objects.all()
@@ -12,7 +13,7 @@ def home(request):
         form = Form(request.POST)
         if form.is_valid():
             form.save()
-            form = Form()
+            return redirect('core:home')
     else:
         form = Form()
 

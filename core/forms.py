@@ -18,5 +18,13 @@ class Form(forms.ModelForm):
 
             'mensagem': forms.Textarea(attrs={
                 'class': 'campo-mensagem campo',
-                'placeholder': 'Descreva o que você tem em mente...'})
+                'placeholder': 'Descreva o que você tem em mente...',
+                'maxlength': '1500'}),
         }
+
+        def clean_mensagem(self):
+            mensagem = self.cleaned_data.get('mensagem')
+            if len(mensagem) > 1500:
+                raise forms.ValidationError(
+                    'A mensagem deve ter no máximo 1500 caracteres.')
+            return mensagem
