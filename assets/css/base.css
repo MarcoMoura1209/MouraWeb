@@ -51,7 +51,7 @@ label {
 }
 
 textarea {
-    resize: none;
+    resize: vertical;
 }
 
 .texto-azul-claro {

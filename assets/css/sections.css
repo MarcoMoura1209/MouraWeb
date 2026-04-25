@@ -144,6 +144,7 @@
 .skill-nome, .skill-porcentagem{
     font-family: var(--JetBrains-mono);
     font-size: .8rem;
+    max-width: none;
 }
 
 .skill-nome{
@@ -216,6 +217,8 @@
     scroll-margin-top: 5rem;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 3rem;
 
 }
 
@@ -245,7 +248,7 @@
 }
 
 #botoes-contato {
-    width: 15%;
+    width: fit-content;
     display: flex;
     gap: .5rem;
     justify-content: space-around;

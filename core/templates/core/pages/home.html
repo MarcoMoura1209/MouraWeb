@@ -26,7 +26,7 @@
 
     <link rel="canonical" href="/">
 
-    <title>MouraWeb</title>
+    <title>MouraWeb — Marco Moura | Desenvolvedor Python & Django</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -179,20 +179,20 @@
                 </div>
 
                 <div id="botoes-contato">
-                    <a href="" class="btn-secundario">
-                        <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/MarcoMoura1209" class="btn-secundario" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="" class="btn-secundario">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/marco-antonio-moura-alves-4142b12b6/" class="btn-secundario" aria-label="linkedin">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                     </a>
-                    <a href="" class="btn-secundario">
-                        <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:marcomoura272009@gmail.com" class="btn-secundario" aria-label="Email">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
 
             <div class="container-form">
-                <form method="post">
+                <form method="post" action="{% url 'core:home' %}">
                     {% csrf_token %}
                     <div class="formulario">
                         <p>
@@ -208,7 +208,7 @@
                             {{ form.mensagem }}
                         </p>
                     </div>
-                    <button class="btn-primario botao-form" type="submit">
+                    <button class="botao-form" type="submit">
                         <i class="fa-regular fa-paper-plane"></i>
                         POST /message/send
                     </button>
