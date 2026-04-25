@@ -6,6 +6,23 @@
     .titulo {
         font-size: 2.2rem;
     }
+
+
+    #Contato, .container-skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-texto, .container-skills-badge {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .container-form, .container-skills-barra {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
 }
 
 @media (max-width: 480px) {
