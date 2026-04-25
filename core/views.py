@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Projeto, Skill
 from .forms import Form
 
@@ -12,6 +12,7 @@ def home(request):
         form = Form(request.POST)
         if form.is_valid():
             form.save()
+            form = Form()
     else:
         form = Form()
 

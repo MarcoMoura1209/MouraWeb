@@ -50,6 +50,10 @@ label {
     font-size: .9rem;
 }
 
+textarea {
+    resize: none;
+}
+
 .texto-azul-claro {
     color: var(--azul-claro);
 }
