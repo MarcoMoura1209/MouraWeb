@@ -213,6 +213,9 @@
 
 #Contato {
     min-height: 90vh;
+    scroll-margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container-codigo-contato {
@@ -243,6 +246,7 @@
 #botoes-contato {
     width: 15%;
     display: flex;
+    gap: .5rem;
     justify-content: space-around;
 }
 
