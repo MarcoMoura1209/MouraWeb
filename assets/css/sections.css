@@ -39,17 +39,17 @@
 }
 
 .container-projetos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    justify-content: space-around;
     gap: 2rem;
+    margin: 3rem 0rem;
 }
 
 .projeto{
-    max-width: 24.37rem;
     border-radius: .5rem;
     background-color: var(--azul-marinho-escuro);
     border: 0.1rem solid var(--azul-cinza);
-    margin: 3rem 0rem;
     transition: transform 0.3s ease; 
 }
 
