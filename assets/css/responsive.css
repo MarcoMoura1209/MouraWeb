@@ -57,6 +57,11 @@
         font-size: 2.2rem;
     }
 
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+    }
+    
 
     #Contato, .container-skills {
         flex-direction: column;
@@ -96,8 +101,8 @@
     }
 
 
-    footer {
-        font-size: .5rem;
+    footer p {
+        font-size: .7rem;
     }
 
 
@@ -105,4 +110,10 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+        p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    
 }
