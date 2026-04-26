@@ -42,7 +42,7 @@
             <span></span>
         </button>
 
-        <nav>
+        <nav id="nav-menu">
             <ul>
                 <li><a class="nav-principal" href="#Sobre">SOBRE</a></li>
                 <li><a class="nav-principal" href="#Projetos">PROJETOS</a></li>
@@ -231,6 +231,15 @@
         <p># return HttpResponse(status=200)</p>
     </footer>
 
+
+    <script>
+        const botao = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav-menu');
+
+        botao.addEventListener('click', function() {
+            nav.classList.toggle('nav-aberta');
+        });
+    </script>
 </body>
 
 </html>
