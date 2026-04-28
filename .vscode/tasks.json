@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Django runserver",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\python.exe",
+            "args": ["manage.py", "runserver"],
+            "isBackground": false,
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Django makemigrations & migrate",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\python.exe",
+            "args": ["manage.py", "makemigrations"],
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "dependsOn": ["Django migrate"]
+        },
+        {
+            "label": "Django migrate",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\python.exe",
+            "args": ["manage.py", "migrate"],
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
