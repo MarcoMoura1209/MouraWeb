@@ -26,6 +26,7 @@ pip-requirements-parser==32.0.1
 pip_audit==2.10.0
 platformdirs==4.9.6
 pluggy==1.6.0
+psycopg2-binary==2.9.12
 py-serializable==2.1.0
 Pygments==2.20.0
 pyparsing==3.3.2
