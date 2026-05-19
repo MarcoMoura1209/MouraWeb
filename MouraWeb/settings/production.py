@@ -46,3 +46,19 @@ CONTENT_SECURITY_POLICY = {
         'img-src': ("'self'",),
     }
 }
+
+
+LOGGING['handlers']['file'] = {
+    'level': 'WARNING',
+    'class': 'logging.handlers.RotatingFileHandler',
+    'filename': '/var/log/django/core.log', # Lembrar-se de dar permissão de escrita nesta pasta!
+    'maxBytes': 1024 * 1024 * 15,
+    'backupCount': 5,
+    'formatter': 'verbose',
+}
+
+LOGGING['loggers']['django']['handlers'] = ['console', 'file']
+LOGGING['loggers']['django']['level'] = 'WARNING'
+
+LOGGING['loggers']['core']['handlers'] = ['console', 'file']
+LOGGING['loggers']['core']['level'] = 'WARNING'
