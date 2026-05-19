@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django_ratelimit.decorators import ratelimit
 from .models import Projeto, Skill
 from .forms import Form
+from honeypot.decorators import check_honeypot
 
 
+@check_honeypot
 @ratelimit(key='ip', rate='5/h', method='POST', block=True)
 def home(request):
     projetos = Projeto.objects.all()

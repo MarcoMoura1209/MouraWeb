@@ -214,6 +214,10 @@
                             {{ form.mensagem }}
                         </p>
                     </div>
+
+                    {% load honeypot %}
+                    {% render_honeypot_field "fax_number" %}
+                    
                     <button class="botao-form" type="submit">
                         <i class="fa-regular fa-paper-plane"></i>
                         POST /message/send
