@@ -14,7 +14,7 @@ from pathlib import Path
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,12 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -127,4 +121,26 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RATELIMIT_ENABLE = not DEBUG
+
+# Content Security Policy (CSP)
+CONTENT_SECURITY_POLICY_REPORT_ONLY = {
+    'DIRECTIVES': {
+        'default-src': ("'self'",),
+        'script-src': (
+            "'self'",
+            "https://code.iconify.design",
+            "https://cdnjs.cloudflare.com",
+        ),
+        'style-src': (
+            "'self'",
+            "https://cdnjs.cloudflare.com",
+            "https://fonts.googleapis.com",
+        ),
+        'font-src': (
+            "'self'",
+            "https://fonts.gstatic.com",
+            "https://cdnjs.cloudflare.com",
+        ),
+        'img-src': ("'self'",),
+    }
+}
