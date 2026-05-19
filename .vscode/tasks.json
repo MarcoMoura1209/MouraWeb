@@ -5,7 +5,10 @@
             "label": "Django runserver",
             "type": "shell",
             "command": ".\\venv\\Scripts\\python.exe",
-            "args": ["manage.py", "runserver"],
+            "args": [
+                "manage.py",
+                "runserver"
+            ],
             "isBackground": false,
             "problemMatcher": [],
             "group": {
@@ -21,20 +24,58 @@
             "label": "Django makemigrations & migrate",
             "type": "shell",
             "command": ".\\venv\\Scripts\\python.exe",
-            "args": ["manage.py", "makemigrations"],
+            "args": [
+                "manage.py",
+                "makemigrations"
+            ],
             "isBackground": false,
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
             },
-            "dependsOn": ["Django migrate"]
+            "dependsOn": [
+                "Django migrate"
+            ]
         },
         {
             "label": "Django migrate",
             "type": "shell",
             "command": ".\\venv\\Scripts\\python.exe",
-            "args": ["manage.py", "migrate"],
+            "args": [
+                "manage.py",
+                "migrate"
+            ],
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "pip freeze",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "-Command",
+                ".\\venv\\Scripts\\pip.exe freeze | Out-File -Encoding UTF8 requirements.txt"
+            ],
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "pytest",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\python.exe",
+            "args": [
+                "-m",
+                "pytest"
+            ],
             "isBackground": false,
             "problemMatcher": [],
             "presentation": {
