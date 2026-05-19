@@ -46,7 +46,7 @@ class Skill(models.Model):
 class Cliente(models.Model):
     nome = models.CharField(max_length=30)
     email = models.EmailField()
-    mensagem = models.TextField(blank=False, null=False)
+    mensagem = models.TextField(max_length=1500, blank=False, null=False)
 
     class Meta: 
         verbose_name = 'Cliente'
