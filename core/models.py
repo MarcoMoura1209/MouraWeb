@@ -52,6 +52,11 @@ class Cliente(models.Model):
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
 
+    def clean(self):
+        if len(self.mensagem) > 1500:
+            raise ValidationError({
+                'mensagem': 'A mensagem deve ter no máximo 1500 caracteres.'
+            })
 
     def __str__(self):
         return self.nome
