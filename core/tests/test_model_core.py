@@ -1,5 +1,5 @@
 from django.test import TestCase
-from core.models import Tecnologia, Skill, Cliente
+from core.models import Tecnologia, Skill, Cliente, Projeto
 
 
 class TecnologiaModelTest(TestCase):
@@ -124,3 +124,7 @@ class ClienteModelTest(TestCase):
         )
         cliente_invalido.full_clean()
         cliente_invalido.save()
+
+
+class ProjetoModelTest(TestCase):
+    pass
