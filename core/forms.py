@@ -20,6 +20,12 @@ class Form(forms.ModelForm):
                 'class': 'campo-mensagem campo',
                 'placeholder': 'Descreva o que você tem em mente...',
                 'maxlength': '1500'}),
+        },
+
+        error_messages = {
+            'mensagem': {
+                'max_length': 'A mensagem deve ter no máximo 1500 caracteres.'
+            }
         }
 
     def clean_mensagem(self):
