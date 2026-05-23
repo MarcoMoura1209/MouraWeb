@@ -9,7 +9,7 @@ from honeypot.decorators import check_honeypot
 logger = logging.getLogger('core')
 
 @check_honeypot
-@ratelimit(key='ip', rate='5/h', method='POST', block=True)
+@ratelimit(key='ip', rate='10/h', method='POST', block=True)
 def home(request):
     projetos = Projeto.objects.all()
     skills = Skill.objects.all()
