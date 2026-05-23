@@ -1,4 +1,5 @@
 from .base import *
+import copy
 
 
 DEBUG = False
@@ -47,6 +48,8 @@ CONTENT_SECURITY_POLICY = {
     }
 }
 
+
+LOGGING = copy.deepcopy(LOGGING)
 
 LOGGING['handlers']['file'] = {
     'level': 'WARNING',
