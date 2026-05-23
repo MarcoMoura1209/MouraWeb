@@ -1,5 +1,8 @@
 from django.test import TestCase
+from django.core.files.uploadedfile import SimpleUploadedFile
 from core.models import Tecnologia, Skill, Cliente, Projeto
+from io import BytesIO
+from PIL import Image
 
 
 class TecnologiaModelTest(TestCase):
@@ -127,4 +130,95 @@ class ClienteModelTest(TestCase):
 
 
 class ProjetoModelTest(TestCase):
-    pass
+    def setUp(self):
+        imagem = self._criar_imagem_teste()
+
+        self.tecnologia = Tecnologia.objects.create(
+            nome='Django',
+        )
+
+        self.projeto = Projeto.objects.create(
+            titulo='Meu Projeto',
+            descricao='Descrição do projeto',
+            link_github='https://github.com/usuario/projeto',
+            imagem=imagem,
+            ordem=1,
+        )
+        self.projeto.tecnologias.add(self.tecnologia)
+        return super().setUp()
+
+    def _criar_imagem_teste(self):
+        """Cria uma imagem fictícia para testes"""
+        arquivo = BytesIO()
+        imagem = Image.new('RGB', (100, 100), color='red')
+        imagem.save(arquivo, 'JPEG')
+        arquivo.seek(0)
+        return SimpleUploadedFile(
+            'test_image.jpg',
+            arquivo.read(),
+            content_type='image/jpeg'
+        )
+
+    def test_projeto_criado_com_sucesso(self):
+        self.assertEqual(Projeto.objects.count(), 1)
+
+    def test_str_retorna_titulo_do_projeto(self):
+        self.assertEqual(str(self.projeto), 'Meu Projeto')
+
+    def test_salva_titulo_corretamente(self):
+        self.assertEqual(self.projeto.titulo, 'Meu Projeto')
+
+    def test_titulo_invalido_com_mais_de_50_caracteres(self):
+        titulo_invalido = Projeto(
+            titulo='x' * 51,
+            descricao='Descrição do projeto',
+            link_github='https://github.com/usuario/projeto',
+            imagem=self._criar_imagem_teste(),
+            ordem=1,
+        )
+        with self.assertRaises(Exception):
+            titulo_invalido.full_clean()
+            titulo_invalido.save()
+
+    def test_salva_descricao_corretamente(self):
+        self.assertEqual(self.projeto.descricao, 'Descrição do projeto')
+
+    def test_salva_link_github_corretamente(self):
+        self.assertEqual(self.projeto.link_github, 'https://github.com/usuario/projeto')
+
+    def test_link_github_invalido_sem_url_valida(self):
+        link_invalido = Projeto(
+            titulo='Projeto',
+            descricao='Descrição',
+            link_github='nao-e-uma-url-valida',
+            imagem=self._criar_imagem_teste(),
+            ordem=1,
+        )
+        with self.assertRaises(Exception):
+            link_invalido.full_clean()
+            link_invalido.save()
+
+    def test_salva_ordem_corretamente(self):
+        self.assertEqual(self.projeto.ordem, 1)
+
+    def test_ordem_padrão_e_zero(self):
+        imagem = self._criar_imagem_teste()
+        projeto_sem_ordem = Projeto.objects.create(
+            titulo='Projeto Sem Ordem',
+            descricao='Descrição',
+            link_github='https://github.com/usuario/projeto2',
+            imagem=imagem,
+        )
+        self.assertEqual(projeto_sem_ordem.ordem, 0)
+
+    def test_adiciona_tecnologia_ao_projeto(self):
+        self.assertIn(self.tecnologia, self.projeto.tecnologias.all())
+
+    def test_projeto_pode_ter_multiplas_tecnologias(self):
+        tecnologia2 = Tecnologia.objects.create(nome='React')
+        self.projeto.tecnologias.add(tecnologia2)
+        self.assertEqual(self.projeto.tecnologias.count(), 2)
+
+    def test_imagem_salva_corretamente(self):
+        self.assertTrue(self.projeto.imagem)
+        self.assertIn('test_image', self.projeto.imagem.name)
