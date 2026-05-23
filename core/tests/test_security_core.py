@@ -52,3 +52,16 @@ class CsrfTest(TestCase):
             self.url, dados, HTTP_X_CSRFTOKEN=csrf_token
         )
         self.assertEqual(response.status_code, 302)
+
+
+class CSPTeste(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.url = '/'
+        return super().setUp()
+
+    def test_csp_header_presente_na_resposta(self):
+        response = self.client.get(self.url)
+        self.assertIsNotNone(response.get(
+            'Content-Security-Policy-Report-Only'
+        ))
