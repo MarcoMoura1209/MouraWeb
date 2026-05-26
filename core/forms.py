@@ -20,7 +20,7 @@ class Form(forms.ModelForm):
                 'class': 'campo-mensagem campo',
                 'placeholder': 'Descreva o que você tem em mente...',
                 'maxlength': '1500'}),
-        },
+        }
 
         error_messages = {
             'mensagem': {
