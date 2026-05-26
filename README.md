@@ -82,6 +82,32 @@ O projeto foi criado utilizando Django no back-end e tecnologias web modernas no
 └── 📄 requirements.txt
 ```
 
+## Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone URL_DO_REPOSITORIO
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute as migrações:
+
+```bash
+python manage.py migrate
+```
+
+Inicie o servidor:
+
+```bash
+python manage.py runserver
+```
+
 ## Deploy
 
 Acesse o projeto online:
