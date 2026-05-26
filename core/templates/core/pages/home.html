@@ -44,8 +44,8 @@
 </head>
 
 <body>
-    <header>
-        <span class="titulo-muito-pequeno">
+    <header role="banner">
+        <span class="titulo-muito-pequeno" aria-hidden="true">
             &lt;MouraWeb /&gt;
         </span>
 
@@ -55,12 +55,12 @@
             <span></span>
         </button>
 
-        <nav id="nav-menu">
+        <nav id="nav-menu" role="navigation" aria-label="Menu de navegação principal">
             <ul>
-                <li><a class="nav-principal" href="#Sobre">SOBRE</a></li>
-                <li><a class="nav-principal" href="#Projetos">PROJETOS</a></li>
-                <li><a class="nav-principal" href="#Stack">STACK</a></li>
-                <li><a class="nav-principal" href="#Contato">CONTATO</a></li>
+                <li><a class="nav-principal" href="#Sobre" aria-label="Ir para seção Sobre">SOBRE</a></li>
+                <li><a class="nav-principal" href="#Projetos" aria-label="Ir para seção Projetos">PROJETOS</a></li>
+                <li><a class="nav-principal" href="#Stack" aria-label="Ir para seção Stack">STACK</a></li>
+                <li><a class="nav-principal" href="#Contato" aria-label="Ir para seção Contato">CONTATO</a></li>
             </ul>
         </nav>
 
@@ -68,16 +68,16 @@
 
 
     <main>
-        <section id="Sobre">
+        <section id="Sobre" role="region" aria-label="Sobre mim">
             <div class="conteudo-sobre">
-                <p class="titulo-muito-pequeno"># class MarcoMoura(Developer):</p>
-                <span class="titulo-principal">MouraWeb</span>
+                <p class="titulo-muito-pequeno" aria-hidden="true"># class MarcoMoura(Developer):</p>
+                <span class="titulo-principal" aria-hidden="true">MouraWeb</span>
                 <h1 class="titulo">Marco Moura</h1>
                 <p>
                     Desenvolvedor web júnior especializado em <span class="texto-azul-claro">Python</span> & <span
                         class="texto-azul-cinza">Django</span>. Transformando lógica em experiências digitais reais.
                 </p>
-                <p id="codigo-sobre">
+                <p id="codigo-sobre" aria-hidden="true">
                     <span class="texto-azul-petroleo-escuro">self</span>.<span class="texto-azul-medio">nome =</span>
                     "Marco Moura" <br>
                     <span class="texto-azul-petroleo-escuro">self</span>.<span class="texto-azul-medio">stack =</span>
@@ -88,15 +88,15 @@
             </div>
 
             <div id="botoes-sobre">
-                <a class="btn-primario" href="#Projetos">ver projetos</a>
-                <a class="btn-secundario" href="#Contato">contato</a>
+                <a class="btn-primario" href="#Projetos" aria-label="Ver meus projetos">ver projetos</a>
+                <a class="btn-secundario" href="#Contato" aria-label="Ir para formulário de contato">contato</a>
             </div>
 
         </section>
 
 
-        <section id="Projetos">
-            <p class="titulo-muito-pequeno"># models.Portfolio.objects.all()</p>
+        <section id="Projetos" role="region" aria-label="Portfólio de Projetos">
+            <p class="titulo-muito-pequeno" aria-hidden="true"># models.Portfolio.objects.all()</p>
             <h2 class="titulo">Projetos</h2>
             <p>Cada projeto é uma demonstração prática do ecossistema Django, do ORM ao deploy.</p>
 
@@ -117,8 +117,8 @@
         </section>
 
 
-        <section id="Stack">
-            <p class="titulo-muito-pequeno">
+        <section id="Stack" role="region" aria-label="Stack e Habilidades">
+            <p class="titulo-muito-pequeno" aria-hidden="true">
                 # inspect(developer.skills)
             </p>
             <h2 class="titulo">Stack & Skills</h2>
@@ -132,7 +132,7 @@
 
                     <div class="skill">
                         <div class="skill-nome-badge">
-                            <i class="fa-solid fa-circle fa-2xs"></i>
+                            <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
                             <span>
                                 {{ skill.nome }}
                             </span>
@@ -160,7 +160,7 @@
                             <p class="skill-porcentagem"> {{ skill.porcentagem }}% </p>
                         </div>
 
-                        <div class="barra">
+                        <div class="barra" role="progressbar" aria-label="Proficiência em {{ skill.nome }}" aria-valuenow="{{ skill.porcentagem }}" aria-valuemin="0" aria-valuemax="100">
                             <div class="barra-progresso" style="width: {{ skill.porcentagem }}%;"></div>
                         </div>
                     </div>
@@ -177,19 +177,19 @@
         </section>
 
 
-        <section id="Contato">
+        <section id="Contato" role="region" aria-label="Formulário de Contato">
             <div class="contato-texto">
-                <p class="titulo-muito-pequeno"># POST /api/v1/message/send</p>
+                <p class="titulo-muito-pequeno" aria-hidden="true"># POST /api/v1/message/send</p>
                 <h2 class="titulo">Contato</h2>
                 <p>Interessado em trabalhar juntos? Envie uma requisição, respondo em até 12h.</p>
-                <div class="container-codigo-contato">
+                <div class="container-codigo-contato" role="img" aria-label="Janela de código de demonstração">
 
                     <div class="container-points">
-                        <i class="fa-solid fa-circle fa-2xs point-vermelho"></i>
-                        <i class="fa-solid fa-circle fa-2xs point-amarelo"></i>
-                        <i class="fa-solid fa-circle fa-2xs point-verde"></i>
+                        <i class="fa-solid fa-circle fa-2xs point-vermelho" aria-hidden="true"></i>
+                        <i class="fa-solid fa-circle fa-2xs point-amarelo" aria-hidden="true"></i>
+                        <i class="fa-solid fa-circle fa-2xs point-verde" aria-hidden="true"></i>
                     </div>
-                    <div class="container-codigo">
+                    <div class="container-codigo" aria-hidden="true">
                         <p><span class="texto-azul-claro">$</span> curl developer.info</p>
                         <p>{</p>
                         <p>"nome": <span class="texto-branco">"Marco Moura"</span>,</p>
@@ -201,23 +201,23 @@
 
                 </div>
 
-                <div id="botoes-contato">
-                    <a href="https://github.com/MarcoMoura1209" class="btn-secundario" aria-label="GitHub">
+                <div id="botoes-contato" role="list" aria-label="Links de redes sociais">
+                    <a href="https://github.com/MarcoMoura1209" class="btn-secundario" aria-label="GitHub - abrir em nova aba" role="listitem">
                         <i class="fa-brands fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/marco-antonio-moura-alves-4142b12b6/" class="btn-secundario" aria-label="linkedin">
+                    <a href="https://www.linkedin.com/in/marco-antonio-moura-alves-4142b12b6/" class="btn-secundario" aria-label="LinkedIn - abrir em nova aba" role="listitem">
                         <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                     </a>
-                    <a href="mailto:marcomoura272009@gmail.com" class="btn-secundario" aria-label="Email">
+                    <a href="mailto:marcomoura272009@gmail.com" class="btn-secundario" aria-label="Enviar email" role="listitem">
                         <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
 
             <div class="container-form">
-                <form method="post" action="{% url 'core:home' %}">
+                <form method="post" action="{% url 'core:home' %}" aria-label="Formulário para enviar mensagem de contato">
                     {% csrf_token %}
-                    <div class="formulario">
+                    <div class="formulario" role="group" aria-label="Campos obrigatórios do formulário">
                         <p>
                             <label for="id_nome">nome <span class="texto-azul-claro">*</span></label>
                             {{ form.nome }}
@@ -235,8 +235,8 @@
                     {% load honeypot %}
                     {% render_honeypot_field "fax_number" %}
                     
-                    <button class="botao-form" type="submit">
-                        <i class="fa-regular fa-paper-plane"></i>
+                    <button class="botao-form" type="submit" aria-label="Enviar formulário de contato">
+                        <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
                         POST /message/send
                     </button>
                 </form>
@@ -246,10 +246,10 @@
 
     </main>
 
-    <footer>
-        <p><span class="texto-azul-claro">&copy;</span> 2026 <span class="texto-branco">MouraWeb</span> — Marco Moura —
+    <footer role="contentinfo" aria-label="Rodapé do site">
+        <p><span class="texto-azul-claro" aria-hidden="true">&copy;</span> 2026 <span class="texto-branco">MouraWeb</span> — Marco Moura —
             Desenvolvido com Python & Django</p>
-        <p># return HttpResponse(status=200)</p>
+        <p aria-hidden="true"># return HttpResponse(status=200)</p>
     </footer>
 
 

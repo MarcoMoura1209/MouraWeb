@@ -1,7 +1,7 @@
 
-    <div class="projeto">
+    <div class="projeto" role="article" aria-label="Projeto: {{ projeto.titulo }}">
         <div class="projeto-imagem">
-            <img src="{{ projeto.imagem.url }}" alt="{{ projeto.titulo }}">
+            <img src="{{ projeto.imagem.url }}" alt="Captura de tela do projeto {{ projeto.titulo }}">
         </div>
         <div class="projeto-conteudo">
             <h3 class="titulo-muito-pequeno projeto-titulo">
@@ -12,21 +12,19 @@
                 {{ projeto.descricao }}
             </p>
         </div>
-        <div class="projeto-tecnologias">
+        <div class="projeto-tecnologias" role="group" aria-label="Tecnologias utilizadas em {{ projeto.titulo }}">
             {% for tecnologia in projeto.tecnologias.all %}
         
-                <span class="badge">
+                <span class="badge" aria-label="Tecnologia: {{ tecnologia.nome }}">
                     {{ tecnologia.nome }}
                 </span>
         
             {% endfor %}
         </div>
         <div class="projeto-links">
-            <a href="{{ projeto.link_github }}" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
+            <a href="{{ projeto.link_github }}" target="_blank" rel="noopener noreferrer" aria-label="Ver código do projeto {{ projeto.titulo }} no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 código
             </a>
         </div>
     </div>
-
-
