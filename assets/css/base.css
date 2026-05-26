@@ -17,6 +17,13 @@
     --Inter: 'Inter', sans-serif;
 }
 
+@keyframes entrarNaTela {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 * {
     margin: 0;
     padding: 0;

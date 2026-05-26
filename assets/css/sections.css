@@ -21,6 +21,11 @@
     align-items: center;
     margin: 2.5rem 0rem;
     gap: 2rem;
+
+    /* animacao base */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: entrarNaTela linear forwards 0.7s;
 }
 
 #botoes-sobre a {
