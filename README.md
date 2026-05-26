@@ -1,3 +1,5 @@
+<img src="assets\img\og-imagem.png" width="600" alt="Logo da Moura Web">
+
 # Moura Web
 
 Landing page moderna desenvolvida para a Moura Web, com foco em performance, design responsivo e experiência do usuário.
