@@ -140,6 +140,9 @@ X_FRAME_OPTIONS = 'DENY'
 CONTENT_SECURITY_POLICY_REPORT_ONLY = {
     'DIRECTIVES': {
         'default-src': ("'self'",),
+        'style-src-attr': (
+            "'unsafe-inline'",
+        ),
         'script-src': (
             "'self'",
             "https://code.iconify.design",
