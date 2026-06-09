@@ -64,3 +64,6 @@ LOGGING['loggers']['django']['level'] = 'WARNING'
 
 LOGGING['loggers']['core']['handlers'] = ['console', 'file']
 LOGGING['loggers']['core']['level'] = 'WARNING'
+
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
