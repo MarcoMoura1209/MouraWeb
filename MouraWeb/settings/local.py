@@ -3,7 +3,7 @@ import copy
 import os
 
 DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 RATELIMIT_ENABLE = False
 
 # SSL redirect
