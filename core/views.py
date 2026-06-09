@@ -6,6 +6,7 @@ from django.views.decorators.http import require_http_methods
 from .models import Projeto, Skill
 from .forms import Form
 from honeypot.decorators import check_honeypot
+from django.conf import settings
 
 
 logger = logging.getLogger('core')
@@ -52,3 +53,21 @@ def sitemap(request):
 </urlset>'''
 
     return HttpResponse(sitemap_content, content_type='application/xml')
+
+
+@require_http_methods(["GET"])
+def robots(request):
+    """Gera e serve o robots.txt dinamicamente"""
+
+    admin_url = getattr(settings, 'ADMIN_URL', 'admin/')
+    robots_content = '''User-agent: *
+Allow: /
+
+Disallow: /{admin_url}/
+Disallow: /static/
+Disallow: /media/
+
+Sitemap: https://mouraweb.com.br/sitemap.xml
+'''
+
+    return HttpResponse(robots_content, content_type='text/plain')
