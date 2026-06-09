@@ -6,7 +6,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]
-    )
+)
 
 RATELIMIT_ENABLE = True
 
@@ -54,7 +54,7 @@ LOGGING = copy.deepcopy(LOGGING)
 LOGGING['handlers']['file'] = {
     'level': 'WARNING',
     'class': 'logging.handlers.RotatingFileHandler',
-    'filename': '/var/log/django/core.log', # Lembrar-se de dar permissão de escrita nesta pasta!
+    'filename': str(BASE_DIR / 'logs' / 'core.log'),
     'maxBytes': 1024 * 1024 * 15,
     'backupCount': 5,
     'formatter': 'verbose',
