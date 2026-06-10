@@ -1,4 +1,4 @@
-<img src="assets\img\og-imagem-removebg-preview.png" width="600" alt="Logo da Moura Web">
+<img src="assets\img\og-imagem.png" width="600" alt="Logo da Moura Web">
 
 # Moura Web
 
