@@ -49,23 +49,4 @@ CONTENT_SECURITY_POLICY = {
     }
 }
 
-
-# LOGGING = copy.deepcopy(LOGGING)
-
-# LOGGING['handlers']['file'] = {
-#     'level': 'WARNING',
-#     'class': 'logging.handlers.RotatingFileHandler',
-#     'filename': str(BASE_DIR / 'logs' / 'core.log'),
-#     'maxBytes': 1024 * 1024 * 15,
-#     'backupCount': 5,
-#     'formatter': 'verbose',
-# }
-
-# LOGGING['loggers']['django']['handlers'] = ['console', 'file']
-# LOGGING['loggers']['django']['level'] = 'WARNING'
-
-# LOGGING['loggers']['core']['handlers'] = ['console', 'file']
-# LOGGING['loggers']['core']['level'] = 'WARNING'
-
-
 STATIC_ROOT = BASE_DIR / "staticfiles"
