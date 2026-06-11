@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'honeypot',
-    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
