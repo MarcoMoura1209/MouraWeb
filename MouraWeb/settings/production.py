@@ -1,7 +1,9 @@
 from .base import *
+from pathlib import Path
 from decouple import config, Csv
-import copy
 
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 DEBUG = False
 
