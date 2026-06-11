@@ -27,30 +27,30 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-# CONTENT_SECURITY_POLICY = {
-#     'DIRECTIVES': {
-#         'default-src': ("'self'",),
-#         'style-src-attr': (
-#             "'unsafe-inline'",
-#         ),
-#         'script-src': (
-#             "'self'",
-#             "https://code.iconify.design",
-#             "https://cdnjs.cloudflare.com",
-#         ),
-#         'style-src': (
-#             "'self'",
-#             "https://cdnjs.cloudflare.com",
-#             "https://fonts.googleapis.com",
-#         ),
-#         'font-src': (
-#             "'self'",
-#             "https://fonts.gstatic.com",
-#             "https://cdnjs.cloudflare.com",
-#         ),
-#         'img-src': ("'self'",),
-#     }
-# }
+CONTENT_SECURITY_POLICY = {
+    'DIRECTIVES': {
+        'default-src': ("'self'",),
+        'style-src-attr': (
+            "'unsafe-inline'",
+        ),
+        'script-src': (
+            "'self'",
+            "https://code.iconify.design",
+            "https://cdnjs.cloudflare.com",
+        ),
+        'style-src': (
+            "'self'",
+            "https://cdnjs.cloudflare.com",
+            "https://fonts.googleapis.com",
+        ),
+        'font-src': (
+            "'self'",
+            "https://fonts.gstatic.com",
+            "https://cdnjs.cloudflare.com",
+        ),
+        'img-src': ("'self'",),
+    }
+}
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
