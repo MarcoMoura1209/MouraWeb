@@ -30,9 +30,6 @@ CSRF_COOKIE_SECURE = True
 CONTENT_SECURITY_POLICY = {
     'DIRECTIVES': {
         'default-src': ("'self'",),
-        'style-src-attr': (
-            "'unsafe-inline'",
-        ),
         'script-src': (
             "'self'",
             "https://code.iconify.design",
