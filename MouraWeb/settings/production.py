@@ -1,6 +1,7 @@
 from .base import *
 from pathlib import Path
 from decouple import config, Csv
+from csp.constants import UNSAFE_HASHES
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
@@ -32,9 +33,6 @@ CSRF_COOKIE_SECURE = True
 CONTENT_SECURITY_POLICY = {
     'DIRECTIVES': {
         'default-src': ("'self'",),
-        'style-src-attr': (
-            "'unsafe-inline'",
-        ),
         'script-src': (
             "'self'",
             "https://code.iconify.design",
@@ -42,6 +40,8 @@ CONTENT_SECURITY_POLICY = {
         ),
         'style-src': (
             "'self'",
+            UNSAFE_HASHES,
+            "'sha256-l+LQCZo1PCpc6+cP1IqeAjOu62qLmYkCdGNc9KErS/o='",
             "https://cdnjs.cloudflare.com",
             "https://fonts.googleapis.com",
         ),

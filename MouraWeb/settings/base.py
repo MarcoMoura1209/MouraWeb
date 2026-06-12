@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from csp.constants import UNSAFE_HASHES
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -142,9 +143,6 @@ X_FRAME_OPTIONS = 'DENY'
 CONTENT_SECURITY_POLICY_REPORT_ONLY = {
     'DIRECTIVES': {
         'default-src': ("'self'",),
-        'style-src-attr': (
-            "'unsafe-inline'",
-        ),
         'script-src': (
             "'self'",
             "https://code.iconify.design",
@@ -152,6 +150,8 @@ CONTENT_SECURITY_POLICY_REPORT_ONLY = {
         ),
         'style-src': (
             "'self'",
+            UNSAFE_HASHES,
+            "'sha256-l+LQCZo1PCpc6+cP1IqeAjOu62qLmYkCdGNc9KErS/o='",
             "https://cdnjs.cloudflare.com",
             "https://fonts.googleapis.com",
         ),
