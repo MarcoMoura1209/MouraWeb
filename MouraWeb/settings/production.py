@@ -55,10 +55,10 @@ CONTENT_SECURITY_POLICY = {
 }
 
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
-
-# File Storage (para uploads, ImageField, etc)
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
