@@ -195,3 +195,14 @@ form {
     transform: translateY(50px);
     animation: entrarNaTela linear forwards 0.7s;
 }
+
+
+.largura-60 {width: 60%;}
+.largura-60 {width: 65%;}
+.largura-60 {width: 70%;}
+.largura-60 {width: 75%;}
+.largura-60 {width: 80%;}
+.largura-60 {width: 85%;}
+.largura-60 {width: 90%;}
+.largura-60 {width: 95%;}
+.largura-60 {width: 100%;}
