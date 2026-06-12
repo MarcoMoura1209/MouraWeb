@@ -1,12 +1,12 @@
-import logging
 from django.shortcuts import render, redirect
 from django_ratelimit.decorators import ratelimit
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
-from .models import Projeto, Skill
-from .forms import Form
+import logging
 from honeypot.decorators import check_honeypot
 from django.conf import settings
+from .forms import Form
+from .models import Projeto, Skill
 
 
 logger = logging.getLogger('core')

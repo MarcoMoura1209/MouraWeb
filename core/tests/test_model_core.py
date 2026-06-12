@@ -1,8 +1,8 @@
-from django.test import TestCase
-from django.core.files.uploadedfile import SimpleUploadedFile
-from core.models import Tecnologia, Skill, Cliente, Projeto
 from io import BytesIO
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.test import TestCase
 from PIL import Image
+from core.models import Cliente, Projeto, Skill, Tecnologia
 
 
 class TecnologiaModelTest(TestCase):

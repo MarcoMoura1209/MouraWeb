@@ -1,8 +1,7 @@
-import pytest
-from django.core.management import call_command
-from django.test import TestCase, override_settings
 from io import StringIO
 import sys
+from django.core.management import call_command
+from django.test import TestCase, override_settings
 
 
 class ServerStartupTest(TestCase):

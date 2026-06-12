@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Projeto, Tecnologia, Skill, Cliente
-# Register your models here.
+from .models import Cliente, Projeto, Skill, Tecnologia
 
 
 admin.site.register(Projeto)

@@ -1,6 +1,7 @@
-from .base import *
 import copy
 import os
+from .base import *
+
 
 DEBUG = True
 ALLOWED_HOSTS = ['*']

@@ -1,7 +1,7 @@
-from .base import *
 from pathlib import Path
-from decouple import config, Csv
 from csp.constants import UNSAFE_HASHES
+from decouple import Csv, config
+from .base import *
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
