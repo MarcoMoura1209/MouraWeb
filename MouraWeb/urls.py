@@ -18,12 +18,12 @@ from decouple import config
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, URLPattern, URLResolver
 
 
 admin_url = config('ADMIN_URL', default='admin/')
 
-urlpatterns = [
+urlpatterns: list[URLPattern | URLResolver] = [
     path(admin_url, admin.site.urls),
     path('', include('core.urls')),
 ]
