@@ -50,7 +50,7 @@ CONTENT_SECURITY_POLICY = {
             "https://fonts.gstatic.com",
             "https://cdnjs.cloudflare.com",
         ),
-        'img-src': ("'self'",),
+        'img-src': ("'self'", "https://res.cloudinary.com"),
     }
 }
 
