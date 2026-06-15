@@ -40,14 +40,14 @@ def sitemap(request):
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <url>
-        <loc>https://mouraweb.com.br/</loc>
-        <lastmod>2026-06-09</lastmod>
+        <loc>https://mouraweb.up.railway.app/</loc>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link
             rel="alternate"
             hreflang="pt-BR"
-            href="https://mouraweb.com.br/"/>
+            href="https://mouraweb.up.railway.app/"/>
     </url>
 
 </urlset>'''
@@ -67,7 +67,7 @@ Disallow: /{admin_url}/
 Disallow: /static/
 Disallow: /media/
 
-Sitemap: https://mouraweb.com.br/sitemap.xml
+Sitemap: https://mouraweb.up.railway.app/sitemap.xml
 '''
 
     return HttpResponse(robots_content, content_type='text/plain')

@@ -113,7 +113,7 @@ python manage.py runserver
 ## Deploy
 
 Acesse o projeto online:
-https://seudominio.com
+https://mouraweb.up.railway.app/
 
 ## Licença
 
