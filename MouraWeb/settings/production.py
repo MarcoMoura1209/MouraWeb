@@ -1,8 +1,9 @@
+import os
 from pathlib import Path
 from csp.constants import UNSAFE_HASHES
 from decouple import Csv, config
-from .base import *
 from whitenoise.storage import CompressedManifestStaticFilesStorage
+from .base import *
 
 
 class ForgivingManifestStaticFilesStorage(CompressedManifestStaticFilesStorage):
@@ -11,6 +12,13 @@ class ForgivingManifestStaticFilesStorage(CompressedManifestStaticFilesStorage):
             if isinstance(processed, Exception):
                 continue
             yield name, hashed_name, processed
+
+    def compress_files(self, paths, *args, **kwargs):
+        existing_paths = (
+            path for path in paths
+            if os.path.exists(self.path(path))
+        )
+        yield from super().compress_files(existing_paths, *args, **kwargs)
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
