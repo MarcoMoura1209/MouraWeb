@@ -2,6 +2,15 @@ from pathlib import Path
 from csp.constants import UNSAFE_HASHES
 from decouple import Csv, config
 from .base import *
+from whitenoise.storage import CompressedManifestStaticFilesStorage
+
+
+class ForgivingManifestStaticFilesStorage(CompressedManifestStaticFilesStorage):
+    def post_process(self, *args, **kwargs):
+        for name, hashed_name, processed in super().post_process(*args, **kwargs):
+            if isinstance(processed, Exception):
+                continue
+            yield name, hashed_name, processed
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
@@ -65,11 +74,9 @@ STORAGES = {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
     },
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "MouraWeb.settings.production.ForgivingManifestStaticFilesStorage",
     },
 }
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "MouraWeb.settings.production.ForgivingManifestStaticFilesStorage"
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-WHITENOISE_MANIFEST_STRICT = False
